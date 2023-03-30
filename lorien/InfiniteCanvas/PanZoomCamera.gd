@@ -40,7 +40,6 @@ func _process(delta):
 	
 # -------------------------------------------------------------------------------------------------
 func touch_event(event):
-			
 		# Keep track of the fingers on the screen
 		if event is InputEventScreenTouch:
 			if event.pressed:

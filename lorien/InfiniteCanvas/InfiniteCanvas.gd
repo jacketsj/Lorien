@@ -70,7 +70,6 @@ func _process_event(event: InputEvent) -> void:
 	if event.is_action("delete_selected_strokes"):
 		if _active_tool == _selection_tool:
 			_delete_selected_strokes()
-			
 	if ! get_tree().is_input_handled():
 		_camera.tool_event(event)
 	if ! get_tree().is_input_handled():
