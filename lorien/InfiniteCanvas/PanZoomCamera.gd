@@ -58,6 +58,14 @@ func tool_event(event: InputEvent) -> void:
 			elif _zoom_active:
 				_do_zoom_drag(event.relative.y)
 		
+		elif event is InputEventMultiScreenDrag:
+			# At least one finger to drag
+			_do_pan(event.relative)
+		elif event is InputEventScreenPinch:
+			# At least two fingers to zoom
+			if event.fingers > 1:
+				_do_zoom_drag(event.relative)
+		
 		elif Utils.event_pressed_bug_workaround("canvas_zoom_in", event):
 			_do_zoom_scroll(-1)
 			get_tree().set_input_as_handled()
