@@ -251,4 +251,3 @@ __meta__ = {
 [connection signal="new_palette_created" from="NewPaletteDialog" to="." method="_on_NewPaletteDialog_new_palette_created"]
 [connection signal="palette_deleted" from="DeletePaletteDialog" to="." method="_on_DeletePaletteDialog_palette_deleted"]
 [connection signal="palette_changed" from="EditPaletteDialog" to="." method="_on_EditPaletteDialog_palette_changed"]
-
